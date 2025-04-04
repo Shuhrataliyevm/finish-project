@@ -47,7 +47,6 @@ const News = () => {
                     return;
                 }
 
-                // Получаем информацию о должнике
                 const debtorResponse = await fetch(`https://nasiya.takedaservice.uz/api/debtor/${id}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -70,7 +69,6 @@ const News = () => {
 
                 setDebtorName(debtorData.data.full_name);
 
-                // Получаем список долгов
                 const debtsResponse = await fetch(`https://nasiya.takedaservice.uz/api/debts?debtor_id=${id}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -129,7 +127,6 @@ const News = () => {
                 return;
             }
 
-            // Здесь будет API запрос для создания новой транзакции
             await new Promise(resolve => setTimeout(resolve, 1500));
             setIsSuccess(true);
         } catch (error) {
