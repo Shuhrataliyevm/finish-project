@@ -1,0 +1,147 @@
+.logins {
+    max-width: 660px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: -320px;
+    margin-right: 50px;
+    border: none;
+
+    .login-enter-images{
+        position: relative;
+        left: -700px;
+        top: 450px;
+
+        .login-enter{
+            width: 350px;
+            height: 360px;
+        }
+    }
+
+    .phone {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        font-weight: bold;
+        font-size: 16px;
+
+        .phone-time {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .phone-image {
+            display: flex;
+            gap: 5px;
+        }
+    }
+
+    .login-image img {
+        width: 50px;
+        margin-bottom: 15px;
+        margin-top: 50px;
+    }
+
+    h4 {
+        font-size: 36px;
+        font-weight: 700;
+
+        color: #222;
+    }
+
+    .logins-text {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .login-password  input{
+        width: 100%;
+        height: 38px;
+        border-radius: 8px;
+        padding-left: 2px;
+        font-size: 16px;
+        transition: 0.3s;
+
+        &:focus {
+            border-color: #007bff;
+            box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+        }
+    }
+
+
+
+    .login-input input {
+        width: 100%;
+        height: 45px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        padding-left: 10px;
+        font-size: 16px;
+        transition: 0.3s;
+
+        &:focus {
+            border-color: #007bff;
+            box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+        }
+    }
+
+    .logins-textes {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 15px;
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .ant-btn {
+        width: 100%;
+        height: 45px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        background: #007bff;
+        border: none;
+        color: white;
+        transition: 0.3s;
+
+        &:hover {
+            background: #0056b3;
+        }
+    }
+
+    @media (max-width: 650px) {
+        max-width: 500px;
+        padding: 5px;
+        margin-left: 55px;
+        margin-top: -380px;
+
+        h4 {
+            font-size: 26px;
+        }
+
+        .logins-text {
+            font-size: 16px;
+        }
+
+        input {
+            height: 40px;
+            font-size: 14px;
+        }
+
+        .ant-btn {
+            height: 40px;
+            font-size: 14px;
+        }
+    }
+}
