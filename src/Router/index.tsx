@@ -7,7 +7,7 @@ import Calendar from "../pages/Calendar/calendar";
 import Products from "../pages/Products/products";
 import CreateDebtor from "../pages/CreateDebtor/CreateDebtor";
 import News from "../pages/News/news";
-import Nastroyka from "../pages/Nastroyka/nastroyka";
+import Setting from "../pages/Setting/setting";
 const Router = () => {
     return (
         <Routes>
@@ -17,7 +17,7 @@ const Router = () => {
                 <Route path="products" element={<Products />} />
                 <Route path="create-debtor" element={<CreateDebtor />} />
                 <Route path="calendar" element={<Calendar />} />
-                <Route path="nastroyka" element={<Nastroyka />} />
+                <Route path="setting" element={<Setting />} />
             </Route>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />

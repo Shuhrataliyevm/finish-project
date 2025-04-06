@@ -610,11 +610,22 @@
                 outline: none;
                 border-color: #007AFF;
             }
+
+            &.error {
+                border-color: #FF3B30;
+            }
         }
 
         textarea {
             min-height: 100px;
             resize: vertical;
+        }
+
+        .error-message {
+            color: #FF3B30;
+            font-size: 14px;
+            margin-top: 4px;
+            display: block;
         }
     }
 
@@ -661,6 +672,31 @@
             }
         }
     }
+
+    .add-button {
+        width: 100%;
+        padding: 16px;
+        background: linear-gradient(135deg, #4318FF 0%, #868CFF 100%);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 24px;
+
+        &:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(67, 24, 255, 0.2);
+        }
+
+        &:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            background: #E5E5EA;
+        }
+    }
 }
 
 .success-screen {
@@ -703,5 +739,46 @@
         height: 100%;
         background-color: #34C759;
         transition: width 0.3s ease;
+    }
+}
+
+.transaction-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .transaction-date {
+        font-size: 12px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .transaction-amount {
+        font-size: 16px;
+        font-weight: 500;
+        color: #000;
+        margin-bottom: 12px;
+    }
+
+    .progress-bar {
+        height: 4px;
+        background-color: #E0E0E0;
+        border-radius: 2px;
+        overflow: hidden;
+
+        .progress {
+            height: 100%;
+            background-color: #4CAF50;
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
     }
 } 

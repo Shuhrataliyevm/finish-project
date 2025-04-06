@@ -79,7 +79,7 @@ const Profile = () => {
                             <img style={{ width: "75px", height: "75px", position: "relative", left: "-55px", top: "-10px" }} src="/images/Wallet icon.png" alt="Wallet icon" />
                             <p id="new-ps" >Hisobingizda</p>
                             <h3 id="new-p" >300 000 so'm</h3>
-                            <button id="promt-btn" onClick={() => { navigate("/create-debtor") }}>+</button>
+                            <button id="promt-btn">+</button>
 
                             <div className="nace">
                                 <p id="cart-colors">Bu oy uchun to‘lov:</p>
@@ -107,7 +107,11 @@ const Profile = () => {
                         <p>Hisobot</p>
                     </div>
                     <div className="homes">
-                        <button onClick={() => navigate("/nastroyka")}>
+                        <button onClick={() =>{
+                            console.log('clicked')
+                            navigate("/setting");
+                            
+                        }}>
                             <img src="/images/Settings.png" alt="settings image" />
                             <p>Sozlama</p>
                         </button>

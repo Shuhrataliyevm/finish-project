@@ -7,8 +7,8 @@ import Products from './pages/Products/products';
 import News from './pages/News/news';
 import Calendar from './pages/Calendar/calendar';
 import CreateDebtor from './pages/CreateDebtor/CreateDebtor';
-import AddTransaction from './pages/Products/AddTransaction';
 import SplashScreen from './components/SplashScreen';
+import Setting from './pages/Setting/setting';
 
 const queryClient = new QueryClient();
 
@@ -44,6 +44,14 @@ const App = () => {
                     }
                 />
                 <Route
+                    path="/setting"
+                    element={
+                        <ProtectedRoute>
+                            <Setting />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
                     path="/news/:id"
                     element={
                         <ProtectedRoute>
@@ -64,14 +72,6 @@ const App = () => {
                     element={
                         <ProtectedRoute>
                             <CreateDebtor />
-                        </ProtectedRoute>
-                    }
-                />
-                <Route
-                    path="/add-transaction"
-                    element={
-                        <ProtectedRoute>
-                            <AddTransaction />
                         </ProtectedRoute>
                     }
                 />
